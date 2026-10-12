@@ -75,7 +75,7 @@ async function sendMessage(customText = null) {
   showTyping();
 
   try {
- const response = await fetch("https://ai-program-assistant-1.onrender.com/api/chat", {
+const response = await fetch("https://ai-program-assistant-1.onrender.com/api/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
