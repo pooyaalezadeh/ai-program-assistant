@@ -4,6 +4,7 @@
   "description": "",
   "main": "electron.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "electron": "electron electron.js",
     "build": "electron-builder --win"
@@ -13,14 +14,23 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@capacitor/android": "^7.4.4",
-    "@capacitor/core": "^7.4.4",
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/cli": "^8.5.3",
+    "@capacitor/core": "^8.5.3",
     "dotenv": "^17.4.2",
     "express": "^5.2.1"
   },
   "devDependencies": {
-    "@capacitor/cli": "^7.4.4",
-    "electron": "^44.7.0",
-    "electron-builder": "^26.15.3"
+    "electron": "^44.7.0"
+  },
+  "build": {
+    "appId": "com.poyatech.aiprogrammingassistant",
+    "productName": "AI Programming Assistant",
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    }
   }
 }
