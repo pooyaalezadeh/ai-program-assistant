@@ -2,17 +2,25 @@
   "name": "ai-programming-assistant",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "electron.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "electron": "electron electron.js",
+    "build": "electron-builder --win"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@capacitor/android": "^7.4.4",
+    "@capacitor/core": "^7.4.4",
     "dotenv": "^17.4.2",
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.4",
+    "electron": "^44.7.0",
+    "electron-builder": "^26.15.3"
   }
 }
